@@ -1,6 +1,7 @@
 require_relative 'movie'
 require_relative 'tmdb'
 
+
 require 'sinatra'
 
 
@@ -11,6 +12,13 @@ get '/' do
 end
 
 get '/movies' do 
-  @movie_app_name = "Tobflix"
+@movie = []
+@movie << Movie.new('Titanic', 1997, 'Drama')
+@movie << Movie.new('Some Like it Hot', 1959, 'Comedy')
+@movie << Movie.new('Monster\'s Inc', 2001, 'Family')
   erb :movies
+end
+
+get '/movies/new' do
+  erb :new_movie
 end
