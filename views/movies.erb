@@ -2,8 +2,8 @@
 <h1>Your Current Queue</h1>
 
 <ul>
-  <% @movie.each do |movie| %>
-  <li><%= movie.title %> <%= movie.year %> <%= movie.genre %></li>
+  <% @@tmdb.movie.each do |movie| %>
+  <li><%= movie.title %> <%= movie.year %> <%= movie.genre %> <%= movie.priority %></li>
   <% end %> 
 
 </ul>
