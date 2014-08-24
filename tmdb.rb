@@ -9,7 +9,7 @@ class Tmdb
   def add_title(movie)
     movie.id = @id
     @movie << movie
-    @id +=
+    @id += 1
   end
 
 end
