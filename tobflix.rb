@@ -11,10 +11,16 @@ get '/' do
   erb :index
 end
 
-get '/movies' do 
+get '/movie' do 
   erb :movies
 end
 
 get '/movies/new' do
   erb :new_movie
+end
+
+post '/movie' do
+  new_movie = Movie.new(params[:title], params[:year], params[:genre], params[:priority])
+  @@tmdb.add_title(new_movie)
+  redirect to ('/movie')
 end
