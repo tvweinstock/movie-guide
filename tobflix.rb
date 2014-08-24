@@ -4,7 +4,7 @@ require_relative 'tmdb'
 
 require 'sinatra'
 
-
+@@tmdb = Tmdb.new
 
 get '/' do 
   @movie_app_name = "Tobflix"
