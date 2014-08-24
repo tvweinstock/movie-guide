@@ -12,4 +12,8 @@ class Tmdb
     @id += 1
   end
 
+  def find(movie_id)
+    @movie.find{ |movie| movie.id == movie_id }    
+  end
+
 end
