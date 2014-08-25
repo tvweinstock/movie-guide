@@ -3,6 +3,9 @@ require_relative 'tmdb'
 
 
 require 'sinatra'
+require 'data_mapper'
+
+DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
 @@tmdb = Tmdb.new
 
