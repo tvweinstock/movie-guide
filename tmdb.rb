@@ -16,4 +16,8 @@ class Tmdb
     @movie.find{ |movie| movie.id == movie_id }    
   end
 
+  def remove_movie(movie)
+    @movie.delete(movie)
+  end
+
 end

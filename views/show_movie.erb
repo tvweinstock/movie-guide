@@ -5,3 +5,9 @@
   <p>Viewing Priority: <%= @movie.priority %></p>
 
 </div>
+
+<form action="/movie/<%= @movie.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name ="Delete Movie" value="delete">
+
+</form>

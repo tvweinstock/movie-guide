@@ -4,9 +4,14 @@
 <ul>
   <% @@tmdb.movie.each do |movie| %>
   <li> <a href="<%= '/movie/' + movie.id.to_s %>">
-  <%= movie.title %> <%= movie.year %> <%= movie.genre %> <%= movie.priority %>
+    <%= movie.title %> <%= movie.year %> <%= movie.genre %> <%= movie.priority %>
+  </a>
+</li>
+<li> <a href="<%= '/movie/' + movie.id.to_s + '/edit' %>">
+  Edit
 </a>
-  </li>
-  <% end %> 
+</li>
+
+<% end %> 
 
 </ul>
