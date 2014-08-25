@@ -1,4 +1,3 @@
-require_relative 'movie'
 require_relative 'tmdb'
 
 
@@ -6,6 +5,18 @@ require 'sinatra'
 require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
+
+class Movie
+  include DataMapper
+  attr_accessor :id, :title, :year, :genre, :priority
+
+  def initialize(title, year, genre, priority)
+    @title    = title
+    @year     = year
+    @genre    = genre
+    @priority = priority
+  end
+end
 
 @@tmdb = Tmdb.new
 
