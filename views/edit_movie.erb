@@ -14,15 +14,6 @@
     <input type="text" name="genre" value="<%= @movie.genre %>">
   </fieldset>
 
-  <fieldset>
-    <label for="Priority">Viewing Priority</label>
-    <label for=status>ASAP</label> <input type="radio" name="priority" <%= "checked" if @movie.priority==1 %> value=1>
-    <label for=status>Within the week</label> <input type="radio" name="priority" <%= "checked" if @movie.priority==2 %> value=2>
-    <label for=status>Within the month</label> <input type="radio" name="priority" <%= "checked" if @movie.priority==3 %> value=3>
-    <label for=status>Before the sequel comes out</label> <input type="radio" name="priority" <%= "checked" if @movie.priority==4 %> value=4>
-  </fieldset>
-
-
   <label><input type="submit" name="Submit"></label>
 
 
